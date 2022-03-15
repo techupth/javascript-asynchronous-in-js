@@ -5,3 +5,7 @@ let getUser = () => {
 };
 
 // Start coding here
+
+getUser().then((data) => {
+  console.log(data);
+});

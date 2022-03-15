@@ -1,10 +1,10 @@
-let getUser = () => {
+let getUser = async () => {
   return "User data from server";
 };
 
-function asynchronousFunction() {
-  let user;
-  // Start coding here
+async function asynchronousFunction() {
+  let user = await getUser();
+  console.log(user);
 }
 
 asynchronousFunction();

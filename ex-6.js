@@ -1,20 +1,23 @@
-let getUser = () => {
+let getUser = async () => {
   return "user data";
 };
 
-let getOrders = (user) => {
+let getOrders = async (user) => {
   return "orders";
 };
 
-let getItems = (orders) => {
+let getItems = async (orders) => {
   return "orders items";
 };
 
-function asynchronousFunction() {
-  let user;
-  let orders;
-  let items;
+async function asynchronousFunction() {
   // Start coding here
+
+  let user = await getUser();
+  let orders = await getOrders(user);
+  let items = await getOrders(orders);
+
+  console.log(items);
 }
 
 asynchronousFunction();

@@ -5,3 +5,11 @@ let getEmployeeData = () => {
 };
 
 // Start coding here
+
+getEmployeeData()
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

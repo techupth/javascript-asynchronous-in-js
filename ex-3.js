@@ -17,3 +17,29 @@ let getItems = (orders) => {
 };
 
 // Start coding here
+
+// วิธีแบบเต็มๆ
+// getUser()
+//   .then((user) => {
+//     return getOrders(user);
+//   })
+//   .then((orders) => {
+//     return getItems(orders);
+//   })
+//   .then((items) => {
+//     console.log(items);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// วิธีแบบสั้นๆ
+getUser()
+  .then(getOrders)
+  .then(getItems)
+  .then((items) => {
+    console.log(items);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
