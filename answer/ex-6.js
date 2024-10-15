@@ -1,5 +1,5 @@
-//Exercise #3
-let getJohnProfile = () => {
+//Exercise 6
+let getJohnProfile = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -13,7 +13,7 @@ let getJohnProfile = () => {
   });
 };
 
-let getJohnOrders = () => {
+let getJohnOrders = async () => {
   return new Promise(function (resolve) {
     setTimeout(
       () =>
@@ -33,20 +33,16 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
-// getJohnProfile()
-//   .then((profile) => {
-//     console.log(profile);
-//     return getJohnOrders();
-//   })
-//   .then((orders) => {
-//     console.log(orders);
 
-//   })
-//   .catch((error) => {
-//     console.error("Error:", error);
-//   });
+async function asynconousFunction() {
+  try {
+    let johnProfile = await getJohnProfile();
+    console.log(johnProfile);
+    let johnOrders = await getJohnOrders();
+    console.log(johnOrders);
+  } catch (errorMessage) {
+    console.log(errorMessage);
+  }
+}
 
-getJohnProfile()
-  .then((profile) => console.log(profile))
-  .then(getJohnOrders)
-  .then((order) => console.log(order));
+asynconousFunction();

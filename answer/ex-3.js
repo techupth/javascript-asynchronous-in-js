@@ -1,4 +1,4 @@
-//Exercise #3
+//Exercise 3
 let getJohnProfile = () => {
   return new Promise(function (resolve) {
     setTimeout(
@@ -33,20 +33,11 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
-// getJohnProfile()
-//   .then((profile) => {
-//     console.log(profile);
-//     return getJohnOrders();
-//   })
-//   .then((orders) => {
-//     console.log(orders);
-
-//   })
-//   .catch((error) => {
-//     console.error("Error:", error);
-//   });
+function displayReceivedData(data) {
+  console.log(data);
+}
 
 getJohnProfile()
-  .then((profile) => console.log(profile))
+  .then(displayReceivedData)
   .then(getJohnOrders)
-  .then((order) => console.log(order));
+  .then(displayReceivedData);
